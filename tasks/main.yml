@@ -9,9 +9,8 @@
 
 - name: Install packages
   package:
-    name: "{{ item }}"
-    state: installed
-  with_items: "{{ pxeserver_packages }}"
+    name: "{{ pxeserver_packages }}"
+    state: present
   tags: pxeserver
 
 - name: Ensure services are started

@@ -1,0 +1,23 @@
+---
+
+pxeserver_packages:
+  - nfs-kernel-server
+  - nfs-common
+  - rsync
+  - shim
+  - syslinux
+  - pxelinux
+
+pxeserver_services:
+  - rpcbind
+  - nfs-server
+
+pxeserver_files:
+  # - /boot/efi/EFI/BOOT/BOOTX64.EFI
+  - /usr/lib/syslinux/memdisk
+  - /usr/lib/syslinux/modules/bios/menu.c32
+  - /usr/lib/syslinux/modules/bios/ldlinux.c32
+  - /usr/lib/syslinux/modules/bios/libmenu.c32
+  - /usr/lib/syslinux/modules/bios/libutil.c32
+  - /usr/lib/PXELINUX/pxelinux.0
+  

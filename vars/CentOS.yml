@@ -1,4 +1,3 @@
-# roles/pxeserver/vars/main.yml
 ---
 
 pxeserver_packages:

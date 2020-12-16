@@ -1,17 +1,22 @@
 ---
 galaxy_info:
-  author: Bert Van Vreckem
-  description: Role for setting up a PXE server on RHEL/CentOS 7
+  author: ckaserer
+  description: Role for setting up a PXE server on RHEL/CentOS 7 and Ubuntu
   company:
   license: BSD
-  min_ansible_version: 2.0
+  min_ansible_version: 2.10
   platforms:
     - name: EL
       versions:
         - 7
+    - name: Ubuntu
+      version:
+        - bionic
+        - focal
+        - xenial
   galaxy_tags:
     - system
     - networking
-dependencies:
-  - bertvv.tftp
-  - bertvv.dhcp
+dependencies: []
+  # - bertvv.tftp
+  # - bertvv.dhcp
