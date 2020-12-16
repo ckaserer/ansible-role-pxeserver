@@ -7,6 +7,12 @@
     - "{{ ansible_os_family }}.yml"
   tags: pxeserver
 
+- name: Update apt-get cache
+  apt:
+    update_cache: true
+    cache_valid_time: 3600
+  when: ansible_os_family == 'Debian'
+  
 - name: Install packages
   package:
     name: "{{ pxeserver_packages }}"

@@ -1,5 +1,7 @@
 ---
 
+tftp_root_directory: "/srv/tftp"
+
 pxeserver_packages:
   - nfs-kernel-server
   - nfs-common
